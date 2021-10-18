@@ -5,10 +5,12 @@ application up and running.
 
 $ ```docker-compose build```
 
-create DB. 
+create DB
+
 $ ```docker-compose run web rake db:create```
 
-starting Containers. 
+starting Containers
+
 $ ```docker-compose up```
 
 Things you may want to cover:
