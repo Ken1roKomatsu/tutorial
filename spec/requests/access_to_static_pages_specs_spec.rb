@@ -1,0 +1,14 @@
+require 'rails_helper'
+
+RSpec.describe 'Access to static_pages', type: :request do
+  describe 'GET #static_pages_home' do
+    before { get root_path }
+    it 'responds successfully' do
+      expect(response).to have_http_status 200
+    end
+    it "has title 'Ruby on Rails Tutorial Sample App'" do
+      expect(response.body).to include 'Ruby on Rails Tutorial Sample App'
+      # expect(response.body).to_not include '| Ruby on Rails Tutorial Sample App'
+    end
+  end
+end
